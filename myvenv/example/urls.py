@@ -1,7 +1,9 @@
 from django.contrib import admin
 from django.urls import path, include
-from .views import HelloAPI
+from .views import HelloAPI, bookAPI, booksAPI
 
 urlpatterns = [
-    path('hello/',HelloAPI)
+    path('hello/',HelloAPI),
+    path('fbv/books/', booksAPI),
+    path('fbv/book/<int:bid>', bookAPI)
 ]
