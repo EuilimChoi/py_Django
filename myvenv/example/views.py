@@ -1,5 +1,4 @@
 #from django.shortcuts import render
-
 from operator import truediv
 from rest_framework import viewsets,permissions,generics,status
 from rest_framework.response import Response
