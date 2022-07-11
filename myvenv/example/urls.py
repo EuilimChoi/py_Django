@@ -3,7 +3,7 @@ from django.urls import path, include
 from .views import HelloAPI, bookAPI, booksAPI
 
 urlpatterns = [
-    path('hello/',HelloAPI),
-    path('fbv/books/', booksAPI),
-    path('fbv/book/<int:bid>', bookAPI)
+    path('hello/',HelloAPI.as_view()),
+    path('cbv/books/', booksAPI.as_view()),
+    path('cbv/book/<int:bid>', bookAPI.as_view())
 ]
